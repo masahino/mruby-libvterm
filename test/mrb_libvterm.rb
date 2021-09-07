@@ -78,6 +78,8 @@ assert("VTerm::Screen::Cell.chars") do
   vt.write("abc")
   cell = screen.cell_at(0, 0)
   assert_equal("a", cell.chars)
+  cell = screen.cell_at(0, 1)
+  assert_equal("b", cell.chars)
 end
 
 assert("VTerm::Screen::Cell.fg") do
